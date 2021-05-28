@@ -1,7 +1,10 @@
 <!--  -->
 
 <template>
-  <div>我是Profile</div>
+  <div>
+    <div>我是Profile</div>
+    <p>{{$store.getters.powerCounter}}</p>
+  </div>
 </template>
 
 <script>

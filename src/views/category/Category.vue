@@ -1,9 +1,14 @@
 <!--  -->
 
 <template>
-  <div>我是About</div>
+  <div>
+    <div>我是About</div>
+    <p>{{$store.state.counter}}</p>
+    <button @click = 'addition'>增加</button>
+    <button @click = 'subtraction'>减少</button>
+  </div>
 </template>
-
+ 
 <script>
 export default {
   name: 'Category',
@@ -12,9 +17,20 @@ export default {
     };
   },
   components: {},
-  computed: {},
+  // computed: {
+  //   count : function(){
+  //     return this.$store.state.counter
+  //   }
+  // },
   mounted(){},
-  methods: {}
+  methods: {
+    addition(){
+      this.$store.commit('increment')
+    },
+    subtraction(){
+      this.$store.commit('decrement')
+    }
+  }
 }
 </script>
 
